@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "stock";
+
+package stock;
+
+service Level {
+  rpc GetLevel (LevelRequest) returns (LevelReply);
+}
+
+message LevelRequest {
+  string name = 1;
+}
+
+message LevelReply {
+  string message = 1;
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package employee;
+
+service Employee {
+  rpc GetManager (ManagerRequest) returns (ManagerReply);
+}
+
+message ManagerRequest {
+  string name = 1;
+}
+
+message ManagerReply {
+  string message = 1;
+}
